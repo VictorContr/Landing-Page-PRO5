@@ -8,168 +8,10 @@
     <link rel="stylesheet" href="./css/tailwind.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <!-- <style>
-        body {
-            background: linear-gradient(135deg, #1a2a6c, #222222);
-            background-attachment: fixed;
-            font-family: 'Courier Prime', monospace;
-            color: #e0e0e0;
-        }
-        
-        .ge-container {
-            border: 4px solid #1E90FF;
-            background: rgba(30, 144, 255, 0.1);
-            position: relative;
-            box-shadow: 4px 4px 0px rgba(0,0,0,0.3);
-        }
-        
-        .ge-container::before {
-            content: '';
-            position: absolute;
-            top: 4px;
-            left: 4px;
-            right: 4px;
-            bottom: 4px;
-            border: 2px solid rgba(30, 144, 255, 0.3);
-            pointer-events: none;
-        }
-        
-        .btn-ge {
-            background: #FF69B4;
-            border: 3px solid #555555;
-            color: white;
-            font-family: 'VT323', monospace;
-            font-size: 20px;
-            letter-spacing: 1px;
-            padding: 8px 24px;
-            text-transform: uppercase;
-            box-shadow: 4px 4px 0px rgba(0,0,0,0.3);
-            transition: all 0.1s ease;
-            position: relative;
-        }
-        
-        .btn-ge:hover {
-            transform: translate(2px, 2px);
-            box-shadow: 2px 2px 0px rgba(0,0,0,0.3);
-            background: #ff4da8;
-        }
-        
-        .btn-ge:active {
-            transform: translate(4px, 4px);
-            box-shadow: none;
-        }
-        
-        .btn-ge.btn-blue {
-            background: #1E90FF;
-        }
-        
-        .btn-ge.btn-blue:hover {
-            background: #0d7ae6;
-        }
-        
-        .game-grid {
-            display: grid;
-            grid-template-columns: repeat(10, 1fr);
-            grid-gap: 1px;
-        }
-        
-        .game-cell {
-            background: #444;
-            aspect-ratio: 1/1;
-            border: 1px solid rgba(85, 85, 85, 0.5);
-        }
-        
-        .game-cell.wall {
-            background: #1E90FF;
-        }
-        
-        .game-cell.lolo {
-            background: #FF69B4;
-            border-radius: 50%;
-            position: relative;
-        }
-        
-        .input-ge {
-            background: rgba(30, 144, 255, 0.1);
-            border: 2px solid #1E90FF;
-            color: white;
-            font-family: 'Courier Prime', monospace;
-            padding: 12px 15px;
-            width: 100%;
-            box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
-            transition: all 0.3s ease;
-        }
-        
-        .input-ge:focus {
-            outline: none;
-            border-color: #FF69B4;
-            box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
-        }
-        
-        .input-ge::placeholder {
-            color: #888;
-        }
-        
-        .glow {
-            animation: glow 1.5s infinite alternate;
-        }
-        
-        @keyframes glow {
-            from {
-                box-shadow: 0 0 5px -5px #2ECC71;
-            }
-            to {
-                box-shadow: 0 0 10px 3px #2ECC71;
-            }
-        }
-        
-        .pixel-border {
-            border: 4px solid #1E90FF;
-            box-shadow: 4px 4px 0px rgba(0,0,0,0.3);
-        }
-        
-        .eye-icon {
-            filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));
-        }
-        
-        .character-selector {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            margin-top: 10px;
-        }
-        
-        .character-option {
-            border: 2px solid #1E90FF;
-            border-radius: 8px;
-            padding: 10px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .character-option:hover, .character-option.selected {
-            border-color: #FF69B4;
-            background: rgba(255, 105, 180, 0.1);
-        }
-        
-        .character-avatar {
-            width: 60px;
-            height: 60px;
-            margin: 0 auto 10px;
-            border-radius: 50%;
-            background: #444;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Press Start 2P', cursive;
-            font-size: 24px;
-        }
-    </style> -->
 </head>
-<body>
+<bod >
     <!-- Register Form -->
-    <main class="px-4 sm:px-0">
+    <main id="register" class="px-4 sm:px-0">
         <div class="w-full min-h-screen flex justify-center items-center py-8">
             <div class="flex flex-col md:flex-row w-full max-w-4xl rounded-xl overflow-hidden shadow-2xl ge-container">
                 <!-- Left Panel -->
@@ -311,6 +153,6 @@
             </div>
         </div>
     </main>
-</body>
+</bod>
 <script type="module" src="./js/app.js"></script>
 </html>
