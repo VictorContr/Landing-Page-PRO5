@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Game Enjoyers</title>
+    <link rel="stylesheet" href="./css/tailwind.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- <style>
+        body {
+            background: linear-gradient(135deg, #1a2a6c, #222222);
+            background-attachment: fixed;
+            font-family: 'Courier Prime', monospace;
+            color: #e0e0e0;
+        }
+        
+        .ge-container {
+            border: 4px solid #1E90FF;
+            background: rgba(30, 144, 255, 0.1);
+            position: relative;
+            box-shadow: 4px 4px 0px rgba(0,0,0,0.3);
+        }
+        
+        .ge-container::before {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            right: 4px;
+            bottom: 4px;
+            border: 2px solid rgba(30, 144, 255, 0.3);
+            pointer-events: none;
+        }
+        
+        .btn-ge {
+            background: #FF69B4;
+            border: 3px solid #555555;
+            color: white;
+            font-family: 'VT323', monospace;
+            font-size: 20px;
+            letter-spacing: 1px;
+            padding: 8px 24px;
+            text-transform: uppercase;
+            box-shadow: 4px 4px 0px rgba(0,0,0,0.3);
+            transition: all 0.1s ease;
+            position: relative;
+        }
+        
+        .btn-ge:hover {
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0px rgba(0,0,0,0.3);
+            background: #ff4da8;
+        }
+        
+        .btn-ge:active {
+            transform: translate(4px, 4px);
+            box-shadow: none;
+        }
+        
+        .btn-ge.btn-blue {
+            background: #1E90FF;
+        }
+        
+        .btn-ge.btn-blue:hover {
+            background: #0d7ae6;
+        }
+        
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            grid-gap: 1px;
+        }
+        
+        .game-cell {
+            background: #444;
+            aspect-ratio: 1/1;
+            border: 1px solid rgba(85, 85, 85, 0.5);
+        }
+        
+        .game-cell.wall {
+            background: #1E90FF;
+        }
+        
+        .game-cell.lolo {
+            background: #FF69B4;
+            border-radius: 50%;
+            position: relative;
+        }
+        
+        .input-ge {
+            background: rgba(30, 144, 255, 0.1);
+            border: 2px solid #1E90FF;
+            color: white;
+            font-family: 'Courier Prime', monospace;
+            padding: 12px 15px;
+            width: 100%;
+            box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .input-ge:focus {
+            outline: none;
+            border-color: #FF69B4;
+            box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+        }
+        
+        .input-ge::placeholder {
+            color: #888;
+        }
+        
+        .glow {
+            animation: glow 1.5s infinite alternate;
+        }
+        
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 5px -5px #2ECC71;
+            }
+            to {
+                box-shadow: 0 0 10px 3px #2ECC71;
+            }
+        }
+        
+        .pixel-border {
+            border: 4px solid #1E90FF;
+            box-shadow: 4px 4px 0px rgba(0,0,0,0.3);
+        }
+        
+        .eye-icon {
+            filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));
+        }
+        
+        .character-selector {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .character-option {
+            border: 2px solid #1E90FF;
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .character-option:hover, .character-option.selected {
+            border-color: #FF69B4;
+            background: rgba(255, 105, 180, 0.1);
+        }
+        
+        .character-avatar {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 10px;
+            border-radius: 50%;
+            background: #444;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 24px;
+        }
+    </style> -->
+</head>
+<body>
+    <!-- Register Form -->
+    <main class="px-4 sm:px-0">
+        <div class="w-full min-h-screen flex justify-center items-center py-8">
+            <div class="flex flex-col md:flex-row w-full max-w-4xl rounded-xl overflow-hidden shadow-2xl ge-container">
+                <!-- Left Panel -->
+                <div class="bg-ge-dark w-full md:w-5/12 p-8 md:p-12 flex flex-col justify-center items-center relative">
+                    <!-- Mini juego de fondo -->
+                    <div class="absolute inset-0 opacity-20 z-0">
+                        <div class="game-grid">
+                            <!-- Fila 1 -->
+                            <div class="game-cell wall"></div><div class="game-cell wall"></div><div class="game-cell wall"></div><div class="game-cell wall"></div>
+                            <div class="game-cell wall"></div><div class="game-cell wall"></div><div class="game-cell wall"></div><div class="game-cell wall"></div>
+                            <div class="game-cell wall"></div><div class="game-cell wall"></div>
+                            
+                            <!-- Fila 2 -->
+                            <div class="game-cell wall"></div><div class="game-cell"></div><div class="game-cell"></div><div class="game-cell"></div>
+                            <div class="game-cell"></div><div class="game-cell"></div><div class="game-cell"></div><div class="game-cell"></div>
+                            <div class="game-cell"></div><div class="game-cell wall"></div>
+                            
+                            <!-- Fila 3 -->
+                            <div class="game-cell wall"></div><div class="game-cell"></div><div class="game-cell wall"></div><div class="game-cell wall"></div>
+                            <div class="game-cell"></div><div class="game-cell wall"></div><div class="game-cell wall"></div><div class="game-cell wall"></div>
+                            <div class="game-cell"></div><div class="game-cell wall"></div>
+                            
+                            <!-- Fila 4 -->
+                            <div class="game-cell wall"></div><div class="game-cell"></div><div class="game-cell"></div><div class="game-cell"></div>
+                            <div class="game-cell"></div><div class="game-cell"></div><div class="game-cell"></div><div class="game-cell"></div>
+                            <div class="game-cell"></div><div class="game-cell wall"></div>
+                            
+                            <!-- Fila 5 -->
+                            <div class="game-cell wall"></div><div class="game-cell wall"></div><div class="game-cell wall"></div><div class="game-cell"></div>
+                            <div class="game-cell wall"></div><div class="game-cell wall"></div><div class="game-cell"></div><div class="game-cell wall"></div>
+                            <div class="game-cell"></div><div class="game-cell wall"></div>
+                            
+                            <!-- Fila 6 -->
+                            <div class="game-cell wall"></div><div class="game-cell"></div><div class="game-cell"></div><div class="game-cell"></div>
+                            <div class="game-cell"></div><div class="game-cell"></div><div class="game-cell"></div><div class="game-cell"></div>
+                            <div class="game-cell"></div><div class="game-cell wall"></div>
+                            
+                            <!-- Fila 7 -->
+                            <div class="game-cell wall"></div><div class="game-cell"></div><div class="game-cell wall"></div><div class="game-cell wall"></div>
+                            <div class="game-cell wall"></div><div class="game-cell"></div><div class="game-cell wall"></div><div class="game-cell wall"></div>
+                            <div class="game-cell"></div><div class="game-cell wall"></div>
+                            
+                            <!-- Fila 8 -->
+                            <div class="game-cell wall"></div><div class="game-cell"></div><div class="game-cell"></div><div class="game-cell"></div>
+                            <div class="game-cell"></div><div class="game-cell"></div><div class="game-cell"></div><div class="game-cell"></div>
+                            <div class="game-cell"></div><div class="game-cell wall"></div>
+                            
+                            <!-- Fila 9 -->
+                            <div class="game-cell wall"></div><div class="game-cell lolo"></div><div class="game-cell"></div><div class="game-cell"></div>
+                            <div class="game-cell"></div><div class="game-cell"></div><div class="game-cell"></div><div class="game-cell"></div>
+                            <div class="game-cell"></div><div class="game-cell wall"></div>
+                            
+                            <!-- Fila 10 -->
+                            <div class="game-cell wall"></div><div class="game-cell wall"></div><div class="game-cell wall"></div><div class="game-cell wall"></div>
+                            <div class="game-cell wall"></div><div class="game-cell wall"></div><div class="game-cell wall"></div><div class="game-cell wall"></div>
+                            <div class="game-cell wall"></div><div class="game-cell wall"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col items-center justify-center mb-6 z-10">
+                        <div class="bg-ge-black w-17 h-16 flex items-center justify-center border-4 border-ge-yellow mb-4 pixel-border">
+                            <img class="h-14" src="./img/Game Enjoyers Logo.jpg" alt="logo">
+                        </div>
+                        <h1 class="text-3xl font-press-start text-ge-yellow">GAME ENJOYERS</h1>
+                    </div>
+                    <p class="text-ge-blue font-courier text-center text-sm mt-4 z-10">
+                        ¡Únete a nuestra comunidad! Crea tu cuenta para guardar tus progresos y acceder a contenido exclusivo.
+                    </p>
+                    
+                    <!-- Personajes de juego -->
+                    <div class="mt-8 relative z-10 flex space-x-4">
+                        <div class="w-12 h-12 bg-ge-blue rounded-full flex items-center justify-center">
+                            <span class="text-white font-press-start text-sm">L</span>
+                        </div>
+                        <div class="w-12 h-12 bg-ge-green rounded-full flex items-center justify-center">
+                            <span class="text-white font-press-start text-sm">E</span>
+                        </div>
+                        <div class="w-12 h-12 bg-ge-yellow rounded-full flex items-center justify-center">
+                            <span class="text-ge-dark font-press-start text-sm">P</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Panel -->
+                <div class="bg-ge-dark w-full md:w-7/12 p-8 sm:p-12 ge-container">
+                    <h1 class="font-press-start text-3xl text-ge-yellow">CREAR CUENTA</h1>
+                    <p class="mt-4 text-ge-blue font-courier">
+                        ¿Ya tienes cuenta? 
+                        <a href="./login.html" class="font-semibold text-ge-pink hover:text-white transition">Inicia sesión</a>
+                    </p>
+                    <form action="" class="mt-8">
+                        <div class="space-y-6">
+                            <div>
+                                <label class="block text-ge-blue font-vt323 text-lg mb-1">Nombre Completo</label>
+                                <input id="nombre" type="text" placeholder="Tu nombre completo" 
+                                       class="input-ge">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-ge-blue font-vt323 text-lg mb-1">Teléfono</label>
+                                <input id="tlf" type="tel" placeholder="Tu número de teléfono" 
+                                       class="input-ge">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-ge-blue font-vt323 text-lg mb-1">Correo Electrónico</label>
+                                <input id="correo" type="email" placeholder="tucorreo@ejemplo.com" 
+                                       class="input-ge">
+                            </div>
+                            
+                            <div class="relative">
+                                <label class="block text-ge-blue font-vt323 text-lg mb-1">Contraseña</label>
+                                <input id="clave" type="password" placeholder="••••••••" 
+                                       class="input-ge pr-10">
+                                <button type="button" id="togglePassword" class="absolute right-3 bottom-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-ge-blue eye-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="checkbox" id="terms" class="h-5 w-5 text-ge-pink rounded focus:ring-ge-pink bg-ge-dark border-ge-blue">
+                                <label for="terms" class="ml-2 text-ge-blue font-courier text-sm">
+                                    Acepto los <a href="#" class="text-ge-pink hover:text-white">términos y condiciones</a>
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="btn-ge btn-pink glow w-full">
+                                CREAR CUENTA
+                            </button>
+                            
+                            <a href="./index.html" class="block mt-6 text-center text-ge-pink font-vt323 text-lg hover:text-white transition">
+                                ← Volver al inicio
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script type="module" src="./js/app.js"></script>
+</html>
