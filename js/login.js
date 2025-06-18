@@ -16,3 +16,4 @@ togglePassword.addEventListener('click', ()=> {
     }
 });
 }
+
