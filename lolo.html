@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aventuras de Lolo - Perfil</title>
+    <link rel="stylesheet" href="./css/tailwind.css">
+    <link rel="stylesheet" href="./css/dialogs.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <style>
+        .pixel-border {
+            border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M0 0h4v4H0zM4 4h4v4H4z' fill='%23f59e0b'/%3E%3C/svg%3E") 4;
+            border-style: solid;
+            border-width: 4px;
+        }
+        .btn-ge {
+            font-family: 'VT323', monospace;
+            font-size: 1.5rem;
+            padding: 0.5rem 1.5rem;
+            border-radius: 0;
+            transition: all 0.3s;
+        }
+        .btn-pink {
+            background-color: #EC4899;
+            color: white;
+        }
+        .btn-pink:hover {
+            background-color: #BE185D;
+        }
+        .ge-container {
+            background-color: #1F2937;
+            color: white;
+        }
+        .text-ge-yellow { color: #F59E0B; }
+        .text-ge-pink { color: #EC4899; }
+        .text-ge-blue { color: #3B82F6; }
+    </style>
+</head>
+<body class="bg-gray-900">
+    <header class="bg-ge-dark py-4 px-6 flex justify-between items-center border-b-4 border-ge-yellow pixel-border">
+        <div class="flex items-center">
+            <div class="bg-ge-black w-12 h-12 flex items-center justify-center border-4 border-ge-yellow pixel-border mr-4">
+                <img class="h-10" src="./img/Game Enjoyers Logo.jpg" alt="logo">
+            </div>
+            <h1 class="text-2xl font-press-start text-ge-yellow">AVENTURAS DE LOLO</h1>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+            <div class="text-right hidden md:block">
+                <p class="text-ge-blue font-vt323 text-lg">¡Hola, <span id="nombrePerfil" class="text-ge-yellow">Invitado</span>!</p>
+                <p class="text-ge-blue font-courier text-sm"><span id="correoPerfil">no@iniciado.com</span></p>
+            </div>
+            <button id="cerrarSesion" class="btn-ge btn-pink">
+                CERRAR SESIÓN
+            </button>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <div class="max-w-3xl mx-auto ge-container p-8 rounded-lg">
+            <h2 class="font-press-start text-2xl text-ge-yellow mb-6">PERFIL DE USUARIO</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div>
+                    <h3 class="text-ge-blue font-vt323 text-xl mb-2">INFORMACIÓN PERSONAL</h3>
+                    <ul class="font-courier text-ge-blue space-y-2">
+                        <li><span class="text-ge-yellow">Nombre:</span> <span id="nombreUsuario">-</span></li>
+                        <li><span class="text-ge-yellow">Correo:</span> <span id="correoUsuario">-</span></li>
+                        <li><span class="text-ge-yellow">Teléfono:</span> <span id="telefonoUsuario">-</span></li>
+                        <li><span class="text-ge-yellow">Miembro desde:</span> <span id="fechaRegistro">-</span></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-ge-blue font-vt323 text-xl mb-2">ESTADÍSTICAS</h3>
+                    <ul class="font-courier text-ge-blue space-y-2">
+                        <li><span class="text-ge-yellow">Nivel alcanzado:</span> 3</li>
+                        <li><span class="text-ge-yellow">Puntuación máxima:</span> 5,240</li>
+                        <li><span class="text-ge-yellow">Logros desbloqueados:</span> 2/10</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-ge-blue pt-6">
+                <h3 class="text-ge-blue font-vt323 text-xl mb-4">OPCIONES</h3>
+                <div class="flex flex-wrap gap-4">
+                    <button class="btn-ge btn-pink">EDITAR PERFIL</button>
+                    <button class="btn-ge bg-ge-blue text-white hover:bg-blue-600">CAMBIAR CONTRASEÑA</button>
+                    <button class="btn-ge bg-gray-600 text-white hover:bg-gray-700">ELIMINAR CUENTA</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <dialog id="hastaLuego" class="dialogo rosado dialogo-con-imagen">!Hasta luego¡ <img src="./img/pngwing.com.png" alt="lolo"></dialog>
+    <script type="module" src="./database/firebaseCerrarSesion.js"></script>
+</body>
+</html>

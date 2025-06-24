@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro - Game Enjoyers</title>
     <link rel="stylesheet" href="./css/tailwind.css">
+    <link rel="stylesheet" href="./css/dialogs.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
-<bod >
+<body >
     <!-- Register Form -->
     <main id="register" class="px-4 sm:px-0">
         <div class="w-full min-h-screen flex justify-center items-center py-8">
@@ -153,7 +154,13 @@
             </div>
         </div>
     </main>
-</bod>
+    <dialog id="dialogoCamposVacios" class="dialogo rojo">⚠️ Todos los campos son obligatorios</dialog>
+<dialog id="dialogoCorreoInvalido" class="dialogo rojo">⚠️ Correo no válido</dialog>
+<dialog id="dialogoClaveInvalida" class="dialogo rojo">⚠️ La clave debe tener al menos 8 caracteres, una mayúscula y un número</dialog>
+<dialog id="dialogoTerminos" class="dialogo rojo">⚠️ Debes aceptar los términos y condiciones</dialog>
+<dialog id="dialogoCorreoRepetido" class="dialogo amarillo">✉️ Ese correo ya está registrado</dialog>
+<dialog id="dialogoRegistroExitoso" class="dialogo verde">✅ ¡Registro exitoso!</dialog>
+</body>
 <script type="module" src="./js/app.js"></script>
 <script type="module" src="./database/firebaseRegister.js"></script>
 </html>
