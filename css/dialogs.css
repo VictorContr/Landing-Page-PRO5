@@ -1,4 +1,4 @@
-dialog.dialogo {
+.dialogo {
   position: fixed;
   inset: 0;
   margin: auto;
@@ -18,20 +18,20 @@ dialog.dialogo {
 }
 
 /* Colores */
-.dialogo.verde {
+.verde {
   background-color: #4CAF50;
 }
 
-.dialogo.amarillo {
+.amarillo {
   background-color: #FFC107;
   color: black;
 }
 
-.dialogo.rojo {
+.rojo {
   background-color: #F44336;
 }
 
-.dialogo.rosado{
+.rosado{
     background-color: #ff4da8;
 }
 

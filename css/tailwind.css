@@ -135,9 +135,11 @@
     }
     
     .game-cell.lolo {
-      background: #213893;
-      border-radius: 50%;
-      position: relative;
+    background-image: url('../img/LOLO.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    image-rendering: pixelated;
     }
     
     .game-cell.heart {
@@ -157,8 +159,11 @@
     }
     
     .game-cell.enemy {
-      background: #2ECC71;
-      border-radius: 50%;
+     background-image: url('../img/ENEMY.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    image-rendering: pixelated;
     }
     
     .key {
